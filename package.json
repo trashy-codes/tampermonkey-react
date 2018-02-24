@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "C:\\code\\mscoder\\github\\tampermonkey-react\\build",
   "dependencies": {
+    "@types/greasemonkey": "^0.0.28",
+    "@types/jquery": "^3.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts-ts": "2.13.0"
