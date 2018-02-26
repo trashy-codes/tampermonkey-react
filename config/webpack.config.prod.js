@@ -44,7 +44,7 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // To have this structure working with relative paths, we have to use custom options.
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? // Making sure that the publicPath goes back to to build folder.
-    { publicPath: Array(cssFilename.split('/').length).join('../') }
+  { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
 // This is the production configuration.
@@ -102,7 +102,7 @@ module.exports = {
       '.jsx',
     ],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -114,7 +114,7 @@ module.exports = {
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-      new TsconfigPathsPlugin({configFile: paths.appTsConfig})
+      new TsconfigPathsPlugin({ configFile: paths.appTsConfig })
     ],
   },
   module: {
@@ -287,6 +287,24 @@ module.exports = {
         ascii_only: true,
       },
       sourceMap: shouldUseSourceMap,
+    }),
+    new webpack.BannerPlugin({
+      banner: '\
+// ==UserScript==\n\
+// @name ReactTest\n\
+// @description 集成react\n\
+// @version 1.0\n\
+// @author DaZiYuan\n\
+// @license MIT\n\
+// @include *\n\
+// @icon http://pics.smotri.com/\n\
+// @run-at document-end\n\
+// @grant GM_addStyle\n\
+// @require https://unpkg.com/react@16/umd/react.production.min.js\n\
+// @require https://unpkg.com/react-dom@16/umd/react-dom.production.min.js\n\
+// ==/UserScript==\n\
+      ',
+      raw: true
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin({
