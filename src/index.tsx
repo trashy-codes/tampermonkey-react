@@ -19,11 +19,6 @@ function appendPopup(): void {
   $('body').append('<div id="customPopup"></div>');
 }
 
-(function () {
-  'use strict';
-  appendPopup();
-})();
-
 let result = window.document.location.toString().indexOf('daziyuan.github.io/tampermonkey-react/config.html');
 if (result !== -1) {
   // 配置页面
@@ -32,6 +27,7 @@ if (result !== -1) {
     document.getElementById('configRoot') as HTMLElement
   );
 } else {
+  appendPopup();
   ReactDOM.render(
     <App />,
     document.getElementById('customPopup') as HTMLElement
