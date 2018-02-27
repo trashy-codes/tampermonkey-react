@@ -96,7 +96,7 @@ module.exports = {
       '.jsx',
     ],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -108,7 +108,7 @@ module.exports = {
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-      new TsconfigPathsPlugin({configFile: paths.appTsConfig})
+      new TsconfigPathsPlugin({ configFile: paths.appTsConfig })
     ],
   },
   module: {
@@ -252,6 +252,22 @@ module.exports = {
       watch: paths.appSrc,
       tsconfig: paths.appTsConfig,
       tslint: paths.appTsLint,
+    }),
+    new webpack.BannerPlugin({
+      banner: '\
+// ==UserScript==\n\
+// @name ReactTest\n\
+// @description 集成react\n\
+// @version 1.0\n\
+// @author DaZiYuan\n\
+// @license MIT\n\
+// @include *\n\
+// @grant GM_setValue\n\
+// @grant GM_getValue\n\
+// @run-at document-end\n\
+// ==/UserScript==\n\
+      ',
+      raw: true
     }),
   ],
   // Some libraries import Node modules but don't use them in the browser.

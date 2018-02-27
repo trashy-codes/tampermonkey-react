@@ -21,6 +21,11 @@ function appendPopup(): void {
 
 let result = window.document.location.toString().indexOf('daziyuan.github.io/tampermonkey-react/config.html');
 if (result !== -1) {
+  let root = document.getElementById('configRoot') as HTMLElement;
+  if (!root) {
+    $('body').append('<div id="configRoot"></div>');
+  }
+
   // 配置页面
   ReactDOM.render(
     <Config />,

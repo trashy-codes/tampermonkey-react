@@ -56,6 +56,7 @@ module.exports = {
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
   devtool: shouldUseSourceMap ? 'source-map' : false,
+  // devtool: 'eval-source-map',
   // In production, we only want to load the polyfills and the app code.
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   output: {
@@ -334,6 +335,8 @@ module.exports = {
 // @author DaZiYuan\n\
 // @license MIT\n\
 // @include *\n\
+// @grant GM_setValue\n\
+// @grant GM_getValue\n\
 // @run-at document-end\n\
 // ==/UserScript==\n\
       ',
