@@ -1,20 +1,15 @@
 import * as React from 'react';
 import './App.css';
+import 'antd/dist/antd.css';
+// babel-plugin-import 会帮助你加载 JS 和 CSS
+import { DatePicker } from 'antd';
 
 // const logo = require('./logo.svg');
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <DatePicker />
     );
   }
 }

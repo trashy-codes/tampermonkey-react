@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/greasemonkey": "^0.0.28",
     "@types/jquery": "^3.3.0",
+    "antd": "^3.2.2",
     "autoprefixer": "7.1.6",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
