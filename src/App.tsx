@@ -26,6 +26,9 @@ class App extends React.Component {
   TitleMouseUP(e: React.FormEvent<HTMLElement>) {
     $(document).unbind('mousemove');
   }
+  OpenConfig() {
+    window.open('https://daziyuan.github.io/tampermonkey-react/config.html');
+  }
   render() {
     return (
       <div>
@@ -37,7 +40,7 @@ class App extends React.Component {
         </Row>
         <Row >
           <Col span={24}>
-            <Button type="primary">NewPage</Button>
+            <Button onClick={this.OpenConfig} type="primary">ConfigPage</Button>
           </Col>
         </Row>
       </div >

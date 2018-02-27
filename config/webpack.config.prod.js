@@ -334,11 +334,7 @@ module.exports = {
 // @author DaZiYuan\n\
 // @license MIT\n\
 // @include *\n\
-// @icon http://pics.smotri.com/\n\
 // @run-at document-end\n\
-// @grant GM_addStyle\n\
-// @require https://unpkg.com/react@16/umd/react.production.min.js\n\
-// @require https://unpkg.com/react-dom@16/umd/react-dom.production.min.js\n\
 // ==/UserScript==\n\
       ',
       raw: true
