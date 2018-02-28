@@ -1,13 +1,3 @@
-// ==UserScript==
-// @name ReactTest
-// @description 集成react
-// @version 1.0
-// @author DaZiYuan
-// @license MIT
-// @include *
-// @run-at document-end
-// ==/UserScript==
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
