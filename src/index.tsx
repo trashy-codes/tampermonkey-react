@@ -2,7 +2,7 @@
 // @name ReactTest
 // @description 集成react
 // @version 1.0
-// @author dhswg20077
+// @author DaZiYuan
 // @license MIT
 // @include *
 // @run-at document-end
