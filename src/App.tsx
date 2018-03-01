@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 // babel-plugin-import 会帮助你加载 JS 和 CSS
 import { Row, Col, Button } from 'antd';
 import * as $ from 'jquery';
