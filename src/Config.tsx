@@ -1,11 +1,11 @@
 import * as React from 'react';
-// import { Row, Col, Button, Input, message } from 'antd';
+import { Row, Col, Button, Input, message } from 'antd';
 
-import  Row  from 'antd/lib/row';
-import  Col  from 'antd/lib/col';
-import  Button  from 'antd/lib/button';
-import  Input  from 'antd/lib/input';
-import  message  from 'antd/lib/message';
+// import  Row  from 'antd/lib/row';
+// import  Col  from 'antd/lib/col';
+// import  Button  from 'antd/lib/button';
+// import  Input  from 'antd/lib/input';
+// import  message  from 'antd/lib/message';
 
 interface State {
     configData: string;

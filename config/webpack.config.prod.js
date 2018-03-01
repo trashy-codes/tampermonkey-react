@@ -13,6 +13,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const tsImportPluginFactory = require('ts-import-plugin')
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -159,6 +160,10 @@ module.exports = {
                 options: {
                   // disable type checker - we will use it in fork plugin
                   transpileOnly: true,
+                  //动态引入antd
+                  getCustomTransformers: () => ({
+                    before: [tsImportPluginFactory({ style: 'css' })]
+                  }),
                 },
               },
             ],
